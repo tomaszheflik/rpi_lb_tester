@@ -11,4 +11,4 @@ pipeline:
       - export PATH=$PATH:$GOPATH/bin
       - go build
     when:
-      event: push
+      event: deployment
