@@ -1,0 +1,14 @@
+workspace:
+  base: /go
+  path: src/github.com/tomaszheflik/rpi_lb_tester
+
+pipeline:
+  compile:
+    image: golang:1.6
+    environment:
+      - GOPATH=/go
+    commands:
+      - export PATH=$PATH:$GOPATH/bin
+      - go build
+    when:
+      event: push
